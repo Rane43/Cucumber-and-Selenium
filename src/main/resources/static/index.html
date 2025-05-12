@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<form id="login">
+		<p id="login-message"></p>
+		<h1>Login!</h1>
+		<input id="username" type="text" placeholder="Username"/> <br/>
+		<input id="password" type="password" placeholder="Password"/> <br/>
+		<button id="login-btn" type="button">Log in</button>
+	</form>
+</body>
+
+<!-- CSS -->
+<style>
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		margin: 0;
+	}
+
+	#login {
+		display: block;
+		text-align: center;
+		height: auto;
+	}
+</style>
+
+<!-- JS -->
+<script>
+	const messageParagraph = $("#login-message");
+
+	const usernameField = $("#username");
+	const passwordField = $("#password");
+	const loginBtn = $("#login-btn");
+		
+	$(document).ready(() => {
+		// Event listener for submit button
+		loginBtn.on("click", () => {
+			messageParagraph.text("Successful Login!");
+		});
+	});
+</script>
+</html>
