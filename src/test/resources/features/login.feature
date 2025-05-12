@@ -8,6 +8,7 @@ Feature: Login
   Then a message appears "<message>"
 
   Examples:
-    | username      | password      | message            |
-    | validUsername | validPassword | Successful Login!  |
+    | username        | password      | message             |
+    | validUsername   | validPassword | Successful Login!   |
+    | invalidUsername | validPassword | Unsuccessful Login! |
 

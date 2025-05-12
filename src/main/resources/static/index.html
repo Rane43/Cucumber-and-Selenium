@@ -43,7 +43,11 @@
 	$(document).ready(() => {
 		// Event listener for submit button
 		loginBtn.on("click", () => {
-			messageParagraph.text("Successful Login!");
+			if (usernameField.val() == "validUsername" && passwordField.val() == "validPassword") {
+				messageParagraph.text("Successful Login!");	
+			} else {
+				messageParagraph.text("Unsuccessful Login!");
+			}
 		});
 	});
 </script>
